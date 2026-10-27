@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Stopwatch face with a red record dot in the middle. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- stopwatch button -->
+    <path android:fillColor="#FFFFFF" android:pathData="M48,26h12v6h-12z" />
+    <!-- stopwatch ring -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="5"
+        android:fillColor="#00000000"
+        android:pathData="M54,58m-22,0a22,22 0,1 1,44 0a22,22 0,1 1,-44 0" />
+    <!-- record dot -->
+    <path android:fillColor="#E53935" android:pathData="M54,58m-11,0a11,11 0,1 1,22 0a11,11 0,1 1,-22 0" />
+</vector>
