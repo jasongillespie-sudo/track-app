@@ -1,0 +1,39 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.videotimer.app'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'com.videotimer.app'
+        minSdk 29
+        targetSdk 35
+        versionCode 1
+        versionName '1.0'
+    }
+
+    signingConfigs {
+        // A fixed key checked into the repo so every build can install over the last one.
+        // Fine for a personal app; use a private key before publishing to the Play Store.
+        shared {
+            storeFile file('videotimer.keystore')
+            storePassword 'videotimer'
+            keyAlias 'videotimer'
+            keyPassword 'videotimer'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.shared
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
